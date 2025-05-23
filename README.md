@@ -4,7 +4,7 @@
 
 ### The **FocusTimer** is a small desktop productivity tracker/timer using a Transparent OLED with a Pi camera module hidden behind it. The timer will count up as long as you are focused on the screen/monitor in front of you. Spend too much time looking away, and the timer will reset!
 
-<video src="">
+<!-- <video src=""> -->
 
 ---
 
@@ -57,13 +57,13 @@ Be sure to **reboot** the Pi after the setup script completes.
 ## Assembly
 
 ### 1. ...
-<p align="center"><img src="" width="700"></p>
+<!-- <p align="center"><img src="" width="700"></p> -->
 
 ### 2. ...
-<p align="center"><img src="" width="700"></p>
+<!-- <p align="center"><img src="" width="700"></p> -->
 
 ### 3. ...
-<p align="center"><img src="" width="700"></p>
+<!-- <p align="center"><img src="" width="700"></p> -->
 
 Assembly is now complete!
 
