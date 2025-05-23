@@ -1,4 +1,4 @@
-# FocusTimer — A Productivity Tracking Tool Implementing a Transparent OLED with A Pi Camera Module, and Powered by Python OpenCV on a Raspberry Pi
+# FocusTimer — A Productivity Tracking Tool, Implementing a Transparent OLED + Pi Camera Module, and Powered by Python OpenCV + Raspberry Pi
 
 ![Screenshot 2025-05-01 201531]()
 
