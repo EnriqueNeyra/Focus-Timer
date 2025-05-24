@@ -5,7 +5,7 @@ import time
 class FocusDetector:
     def __init__(self, cascade_path=None):
         if cascade_path is None:
-            cascade_path = "/usr/share/opencv4/haarcascades/haarcascade_frontalface_alt2.xml"
+            cascade_path = cv2.data.haarcascades + "haarcascade_frontalface_alt2.xml"
         self.face_cascade = cv2.CascadeClassifier(cascade_path)
 
     def is_focused(self, frame_gray):

@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-echo "Starting Focus Timer setup..."
+echo "Starting setup..."
 
 # Detect user and home directory
 USER_HOME=$(eval echo ~${SUDO_USER:-$USER})
