@@ -57,3 +57,12 @@ sudo systemctl start focus-timer.service
 
 echo "Setup complete!"
 echo "Log output: sudo journalctl -u focus-timer.service -f"
+
+# Prompt reboot
+read -p "Do you want to reboot now? (y/n): " REBOOT
+if [[ "$REBOOT" =~ ^[Yy]$ ]]; then
+  echo "Rebooting..."
+  sudo reboot
+else
+  echo "Reboot skipped. Please reboot manually for all changes to take effect."
+fi
