@@ -5,7 +5,7 @@ import time
 class FocusDetector:
     def __init__(self, cascade_path=None):
         if cascade_path is None:
-            cascade_path = cv2.data.haarcascades + "haarcascade_frontalface_alt2.xml"
+            cascade_path = "./model_files/haarcascade_frontalface_alt2.xml"
         self.face_cascade = cv2.CascadeClassifier(cascade_path)
 
     def is_focused(self, frame_gray):
@@ -16,8 +16,8 @@ class FocusDetector:
 # import numpy as np
 
 # class FocusDetector:
-#     def __init__(self, model_path="res10_300x300_ssd_iter_140000.caffemodel",
-#                  config_path="deploy.prototxt", confidence_threshold=0.9):
+#     def __init__(self, model_path="./model_files/res10_300x300_ssd_iter_140000.caffemodel",
+#                  config_path="./model_files/deploy.prototxt", confidence_threshold=0.9):
 #         self.net = cv2.dnn.readNetFromCaffe(config_path, model_path)
 #         self.confidence_threshold = confidence_threshold
 

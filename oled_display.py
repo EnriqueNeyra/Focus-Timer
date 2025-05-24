@@ -14,8 +14,8 @@ class OLEDDisplay:
         self.disp = OLED_1in51.OLED_1in51()
         self.disp.Init()
         self.font_cache = {
-            32: ImageFont.truetype(os.path.join('./pic', 'Font.ttc'), 32),
-            22: ImageFont.truetype(os.path.join('./pic', 'Font.ttc'), 22),
+            32: ImageFont.truetype(os.path.join('./lib/waveshare_OLED', 'Font.ttc'), 32),
+            22: ImageFont.truetype(os.path.join('./lib/waveshare_OLED', 'Font.ttc'), 22),
             }
 
     def display_status(self, time_str, x, y, font_size):

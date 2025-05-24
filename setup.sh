@@ -20,6 +20,7 @@ sudo apt install -y \
   python3-spidev \
   python3-numpy \
   python3-smbus \
+  libopencv-data \
 
 # 2. Enable SPI
 echo "Enabling SPI and I2C..."
