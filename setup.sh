@@ -20,12 +20,10 @@ sudo apt install -y \
   python3-spidev \
   python3-numpy \
   python3-smbus \
-  libopencv-data \
 
 # 2. Enable SPI
-echo "Enabling SPI and I2C..."
+echo "Enabling SPI..."
 sudo raspi-config nonint do_spi 0
-sudo raspi-config nonint do_i2c 0
 
 # 4. Create systemd service
 SERVICE_PATH="/etc/systemd/system/focus-timer.service"
@@ -51,7 +49,7 @@ WantedBy=multi-user.target
 EOF
 
 # 5. Enable and start the service
-echo "📡 Enabling focus-timer service..."
+echo "Enabling focus-timer service..."
 sudo systemctl daemon-reexec
 sudo systemctl daemon-reload
 sudo systemctl enable focus-timer.service
