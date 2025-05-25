@@ -34,7 +34,7 @@ echo "Creating systemd service at $SERVICE_PATH..."
 cat <<EOF | sudo tee $SERVICE_PATH > /dev/null
 [Unit]
 Description=FocusFinder python service
-After=network.target
+After=multi-user.target
 
 [Service]
 ExecStart=/usr/bin/python3 $PROJECT_DIR/main.py
