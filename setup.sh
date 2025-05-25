@@ -20,6 +20,7 @@ sudo apt install -y \
   python3-spidev \
   python3-numpy \
   python3-smbus \
+  python3-picamera2 \
 
 # 2. Enable SPI
 echo "Enabling SPI..."
