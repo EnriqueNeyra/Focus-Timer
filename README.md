@@ -13,7 +13,7 @@
 - [Required Hardware](#required-hardware)
 - [Pi Setup](#pi-setup)
 - [Assembly](#assembly)
-- [Using the Timer](#using-the-frame)
+- [Using the FocusFinder](#using-the-frame)
 - [Video Demo](#video-demo)
 
 ---

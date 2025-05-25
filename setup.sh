@@ -6,8 +6,8 @@ echo "Starting setup..."
 # Detect user and home directory
 USER_HOME=$(eval echo ~${SUDO_USER:-$USER})
 USERNAME=$(basename "$USER_HOME")
-PROJECT_DIR="$USER_HOME/Focus-Timer"
-LOG_FILE="/var/log/focus-timer.log"
+PROJECT_DIR="$USER_HOME/FocusFinder"
+LOG_FILE="/var/log/focusfinder.log"
 
 # 1. Install system packages
 echo "Installing system packages..."
@@ -27,13 +27,13 @@ echo "Enabling SPI..."
 sudo raspi-config nonint do_spi 0
 
 # 4. Create systemd service
-SERVICE_PATH="/etc/systemd/system/focus-timer.service"
+SERVICE_PATH="/etc/systemd/system/focus-finder.service"
 
 echo "Creating systemd service at $SERVICE_PATH..."
 
 cat <<EOF | sudo tee $SERVICE_PATH > /dev/null
 [Unit]
-Description=Focus Timer with OLED Display
+Description=FocusFinder python service
 After=network.target
 
 [Service]
@@ -50,14 +50,14 @@ WantedBy=multi-user.target
 EOF
 
 # 5. Enable and start the service
-echo "Enabling focus-timer service..."
+echo "Enabling focus-finder service..."
 sudo systemctl daemon-reexec
 sudo systemctl daemon-reload
-sudo systemctl enable focus-timer.service
-sudo systemctl start focus-timer.service
+sudo systemctl enable focus-finder.service
+sudo systemctl start focus-finder.service
 
 echo "Setup complete!"
-echo "Log output: sudo journalctl -u focus-timer.service -f"
+echo "Log output: sudo journalctl -u focus-finder.service -f"
 
 # Prompt reboot
 read -p "Do you want to reboot now? (y/n): " REBOOT
