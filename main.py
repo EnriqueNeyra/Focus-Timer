@@ -18,7 +18,6 @@ def main():
     while True:
         frame, gray = camera.get_frame()
         focused, faces = detector.is_focused(gray)
-        # focused, faces = detector.is_focused(frame)
         logging.info(f"Focused: {focused}, Faces detected: {len(faces)}")
         focus_state.set(focused)
         
